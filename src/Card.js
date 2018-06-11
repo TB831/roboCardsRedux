@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Card = () => {
+const Card = (props) => {
+  const {name, email, id} = props
   return (
-    <div>
-      <img alt="robots" src="https://robohash.org/test?200x200" />
+    <div className="bg-light-green dib br3 pr3 ma2 grow bw2 shadow-5 tc">
+      <img alt="robots" src={`https://robohash.org/${id}?200x200`} />
       <div>
-        <h2>Jane Doe</h2>
-        <p>JaneDoe@gmail.com</p>
+        <h2>{name}</h2>
+        <p>{email}</p>
       </div>
     </div>
   );
