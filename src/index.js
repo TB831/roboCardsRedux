@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Hello from './Hello.js';
+import Card from './Card.js'
 import registerServiceWorker from './registerServiceWorker';
 import 'tachyons';
 
-ReactDOM.render(<Hello greeting={`Hello ReactNinja`} />, document.getElementById('root'));
+ReactDOM.render(<Card />, document.getElementById('root'));
 
 registerServiceWorker();
