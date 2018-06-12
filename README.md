@@ -1,5 +1,5 @@
 ## Description
-<p>Frontend web application built in React. RoboFriends is application that list several Robots along with their information such as: image, name, and email. An added search input that updates with every keystroke to find the corresponding robot.</p>
+<p>Frontend web application built in React. RoboFriends is application that list several Robots along with their information such as: image, name, and email. We retrieve our users through fetch() and use their id to retrieve their image through RoboHash.org/${id}. An added search input that updates with every keystroke to find the corresponding robot.</p>
 
 ## Screen Shots
 ![screenshot](https://user-images.githubusercontent.com/25675452/41263108-b1863664-6d99-11e8-957b-c4d10e328744.png)
