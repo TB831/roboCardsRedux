@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import { createLogger } from "redux-logger";
 import "./index.css";
 import App from "./containers/App.js";
 import registerServiceWorker from "./registerServiceWorker";
 import { searchRobots } from "./reducer";
 import "tachyons";
 
-const store = createStore(searchRobots);
+const logger = createLogger();  // Middleware
+const store = createStore(searchRobots, applyMiddleware(logger)); // Whenever we add middleware, we must add applyMiddleWare(), parameters are the middleware
 
 ReactDOM.render(
   <Provider store={store}>
