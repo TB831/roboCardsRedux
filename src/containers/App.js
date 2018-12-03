@@ -18,12 +18,12 @@ const mapDispatchToProps = (dispatch) => {  // Dispatches to the reducer.
     onSearchChange: (event) => dispatch(setSearchField(event.target.value))
   }
 }
+
 class App extends React.Component {
   constructor() {
     super()
     this.state = {
       robots: [],
-      // searchField: ''
     }
   }
 
@@ -33,12 +33,7 @@ class App extends React.Component {
     .then((users) => this.setState({robots: users}));
   }
 
-  // onSearchChange = (event) => {
-  //   this.setState({searchField: event.target.value})
-  // }
-
   render() {
-    // const {robots, searchField} = this.state;
     const { robots } = this.state;
     const { searchField, onSearchChange } = this.props;
     const filterRobots = robots.filter(robot => {
